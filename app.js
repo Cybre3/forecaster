@@ -37,7 +37,7 @@ function attachEvents() {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        /* console.log(data); */
         conditionSymbolImg.setAttribute("class", "condition symbol");
         conditionSpan.setAttribute("class", "condition");
         locationSpan.setAttribute("class", "forecast-data");
