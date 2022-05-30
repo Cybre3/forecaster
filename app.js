@@ -7,13 +7,26 @@ function attachEvents() {
   const degreeSymbol = String.fromCharCode(8457);
   /* console.log(degreeSymbol); */
 
+  locationField.addEventListener("keypress", function (e) {
+    if (e.key == "Enter") {
+      getWeatherButton.click();
+    }
+  });
+
   getWeatherButton.addEventListener("click", () => {
     /* console.log("clickidyclick"); */
+
+    console.log("working");
+    if (currentWeatherDiv.innerHTML) currentWeatherDiv.removeChild("div .forecasts");
+    
     forecastDiv.style.display = "block";
     const weatherInfo = document.createElement("div");
     const weatherInfoThreeDay = document.createElement("div");
     weatherInfo.setAttribute("class", "forecasts");
     weatherInfoThreeDay.setAttribute("class", "forecasts");
+    
+    /* threeDayWeatherDiv.innerHTML=""; */
+
 
     let conditionSpan = document.createElement("span");
     let conditionSymbolImg = document.createElement("img");
