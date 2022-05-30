@@ -16,8 +16,8 @@ function attachEvents() {
   getWeatherButton.addEventListener("click", () => {
     /* console.log("clickidyclick"); */
 
-    console.log("working");
-    if (currentWeatherDiv.innerHTML) currentWeatherDiv.removeChild("div .forecasts");
+    /* console.log("working");
+    if (currentWeatherDiv.innerHTML) currentWeatherDiv.removeChild("div .forecasts"); */
     
     forecastDiv.style.display = "block";
     const weatherInfo = document.createElement("div");
