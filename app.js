@@ -14,19 +14,22 @@ function attachEvents() {
   });
 
   getWeatherButton.addEventListener("click", () => {
-    /* console.log("clickidyclick"); */
+    if (currentWeatherDiv.lastElementChild.className === "forecasts") {
+      currentWeatherDiv.removeChild(currentWeatherDiv.lastElementChild);
+    }
+    if (threeDayWeatherDiv.lastElementChild.className === "forecasts") {
+      for (let i = 0; i < 3; i++) {
+        threeDayWeatherDiv.removeChild(threeDayWeatherDiv.lastElementChild);
+      }
+    }
 
-    /* console.log("working");
-    if (currentWeatherDiv.innerHTML) currentWeatherDiv.removeChild("div .forecasts"); */
-    
     forecastDiv.style.display = "block";
     const weatherInfo = document.createElement("div");
     const weatherInfoThreeDay = document.createElement("div");
     weatherInfo.setAttribute("class", "forecasts");
     weatherInfoThreeDay.setAttribute("class", "forecasts");
-    
-    /* threeDayWeatherDiv.innerHTML=""; */
 
+    /* threeDayWeatherDiv.innerHTML=""; */
 
     let conditionSpan = document.createElement("span");
     let conditionSymbolImg = document.createElement("img");
