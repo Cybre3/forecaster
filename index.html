@@ -3,11 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="./public/fav-icon-thermometer-medium.png" />
-    <title>Forecaster</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/ModalContainer.css" />
+    <link rel="stylesheet" href="./styles/CodingChallengesContainer.css" />
+    <title>Forecast</title>
   </head>
 
   <body>
+    <!-- MODAL CONTAINER -->
+    <div id="modal" class="modal-body">
+      <h2 class="modal-title">Welcome to Rapidapi Forecast!</h2>
+      <hr />
+      <h4 class="modal-subtitle">Visit other Small Coding Projects</h4>
+      <p class="modal-descript">
+        This
+        <button class="modal-popover-btn">button</button> allows you to view other Small Coding
+        Challenge projects.
+      </p>
+      <hr />
+      <div class="modal-button-container">
+        <a href="http://starrika-mccloud-portfolio.herokuapp.com/">Back to portfolio</a>
+        <button class="modal-continue-btn">Continue</button>
+      </div>
+    </div>
+
+    <!-- WEATHER APP CONTAINER -->
     <div id="content">
       <div id="request">
         <input id="location" class="bl" type="text" />
@@ -23,5 +43,6 @@
       </div>
     </div>
     <script src="./app.js"></script>
+    <script src="./modal.js"></script>
   </body>
 </html>
