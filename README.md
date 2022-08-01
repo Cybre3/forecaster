@@ -1,3 +1,3 @@
 # forecaster
 
-App uses html and forecaster API
+App uses html and Rapidapi
