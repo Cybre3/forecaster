@@ -14,6 +14,7 @@ function attachEvents() {
   });
 
   getWeatherButton.addEventListener("click", () => {
+    console.log(currentWeatherDiv)
     if (document.getElementById("current").lastElementChild.className === "forecasts") {
       console.log("working")
       currentWeatherDiv.removeChild(currentWeatherDiv.lastElementChild);
