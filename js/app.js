@@ -1,14 +1,12 @@
 import { fetchData } from '../utilities/fetch.js';
 
 export async function weatherDisplay() {
-  if (currentWeatherDiv.lastElementChild.className === 'forecasts') {
+  if (currentWeatherDiv.lastElementChild.className === 'forecasts')
     currentWeatherDiv.removeChild(currentWeatherDiv.lastElementChild);
-  }
-  if (threeDayWeatherDiv.lastElementChild.className === 'forecasts') {
-    for (let i = 0; i < 3; i++) {
+
+  if (threeDayWeatherDiv.lastElementChild.className === 'forecasts')
+    for (let i = 0; i < 3; i++) 
       threeDayWeatherDiv.removeChild(threeDayWeatherDiv.lastElementChild);
-    }
-  }
 
   forecastDiv.style.display = 'block';
   const weatherInfo = document.createElement('div');
